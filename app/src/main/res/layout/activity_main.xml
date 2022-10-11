@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_shot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toast infinite shot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_shot"
+        android:paddingHorizontal="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击一次按钮，展示一次toast，不管点击多少次，都是一个接一个展示,第3次失败，不影响下一个task执行"
+        />
+
+    <Button
+        android:id="@+id/btn_shot_infinite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog infinite shot"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_shot" />
+
+    <TextView
+        android:id="@+id/tv_tips_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_shot_infinite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:text="点击一次按钮，展示一次弹框，不管点击多少次，都是一个接一个展示,关闭当前弹框，才会展示下一个"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
