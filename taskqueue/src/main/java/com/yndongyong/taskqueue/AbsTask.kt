@@ -16,7 +16,7 @@ abstract class AbsTask {
     abstract val callInMainThread: Boolean
 
     /**
-     * 锁，用于执行耗时不固定的任务时，阻塞当前队列，执行完成时候释放当前队列
+     * 用于执行task时，挂起当前coroutine
      */
     private var mutex: Mutex? = null
 
@@ -30,7 +30,7 @@ abstract class AbsTask {
     abstract fun doTask()
 
     /**
-     * 解除阻塞，执行下一个
+     * 恢复当前coroutine，执行下一个task
      */
     fun doNextTask() {
         if (mutex?.isLocked == true) {
