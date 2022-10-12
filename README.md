@@ -19,7 +19,7 @@ maven { url 'https://jitpack.io' }
 
 ```groovy
 dependencies {
-    implementation 'com.github.yndongyong:taskqueue:0.0.1'
+    implementation 'com.github.yndongyong:taskqueue:v0.0.1'
 }
 ```
 
